@@ -59,7 +59,7 @@ export function Hero() {
 
               {/* Device image */}
               <img
-                src="/Front-Clock-with-background.webp"
+                src={`${import.meta.env.BASE_URL}Front-Clock-with-background.webp`}
                 alt="Soluna sleep device - a spherical smart device with glass dome and digital clock display"
                 className="relative z-10 w-72 md:w-96 lg:w-[28rem] h-auto drop-shadow-2xl animate-fade-in"
               />

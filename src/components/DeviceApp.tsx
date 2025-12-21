@@ -18,7 +18,7 @@ export function DeviceApp() {
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-sunrise-400/20 to-plum-500/20 blur-3xl" />
             </div>
             <img
-              src="/woman-bedroom-2-close-up.webp"
+              src={`${import.meta.env.BASE_URL}woman-bedroom-2-close-up.webp`}
               alt="Soluna device glowing warmly on a nightstand next to a peacefully sleeping person"
               className="relative rounded-4xl shadow-2xl w-full"
             />
@@ -120,7 +120,7 @@ export function DeviceApp() {
                 <div className="w-64 h-64 rounded-full bg-gradient-to-br from-plum-500/20 to-sunrise-400/20 blur-3xl" />
               </div>
               <img
-                src="/hand-mockup-phone.webp"
+                src={`${import.meta.env.BASE_URL}hand-mockup-phone.webp`}
                 alt="Soluna mobile app showing Good Morning greeting with purple gradient design"
                 className="relative w-full max-w-md rounded-3xl shadow-2xl"
               />

@@ -6,19 +6,19 @@ const testimonials = [
     quote: "I've struggled with insomnia for years. After just two weeks with Soluna, I'm falling asleep naturally and waking up refreshed. It's genuinely changed my life.",
     name: 'Sarah Chen',
     title: 'Software Engineer',
-    image: '/woman-forest-1.webp',
+    image: 'woman-forest-1.webp',
   },
   {
     quote: "The sunrise wake feature is incredible. I haven't needed an alarm in months. My mornings are calmer and I have more energy throughout the day.",
     name: 'Marcus Johnson',
     title: 'Marketing Director',
-    image: '/man-wake-up-1.webp',
+    image: 'man-wake-up-1.webp',
   },
   {
     quote: "As a new parent, sleep was a luxury. Soluna helped me maximize the sleep I could get. The AI really does learn and adapt to your patterns.",
     name: 'Emily Rodriguez',
     title: 'Product Designer',
-    image: '/woman-bedroom-1.webp',
+    image: 'woman-bedroom-1.webp',
   },
 ];
 
@@ -66,7 +66,7 @@ export function Testimonials() {
                 <div className="flex items-center gap-4 pt-4 border-t border-lavender-200">
                   <div className="w-12 h-12 rounded-full overflow-hidden bg-lavender-300">
                     <img
-                      src={testimonial.image}
+                      src={`${import.meta.env.BASE_URL}${testimonial.image}`}
                       alt={testimonial.name}
                       className="w-full h-full object-cover"
                     />
