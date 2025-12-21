@@ -1,0 +1,12 @@
+export { Button } from './Button';
+export { Card, IconCard } from './Card';
+export { SectionTitle } from './SectionTitle';
+export { Header } from './Header';
+export { Hero } from './Hero';
+export { HowItWorks } from './HowItWorks';
+export { Science } from './Science';
+export { DeviceApp } from './DeviceApp';
+export { Stats } from './Stats';
+export { Testimonials } from './Testimonials';
+export { FAQ } from './FAQ';
+export { Footer } from './Footer';
