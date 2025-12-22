@@ -1,6 +1,9 @@
 import { Button } from './Button';
+import { useParallax } from '../hooks/useScrollAnimation';
 
 export function Hero() {
+  const parallaxOffset = useParallax(0.3);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
       {/* Background decorative elements */}
@@ -39,9 +42,12 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Device image */}
+          {/* Device image with parallax */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative">
+            <div
+              className="relative"
+              style={{ transform: `translateY(${parallaxOffset}px)` }}
+            >
               {/* Glow effect */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-white/20 blur-3xl animate-glow-pulse" />

@@ -9,11 +9,13 @@ import {
   NaturallyIntelligent,
   FAQ,
   Footer,
+  ScrollProgress,
 } from './components';
 
 function App() {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <Header />
       <main>
         <Hero />

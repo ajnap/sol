@@ -1,4 +1,5 @@
 import { SectionTitle } from './SectionTitle';
+import { ScrollReveal } from './ScrollAnimations';
 
 const features = [
   {
@@ -61,41 +62,43 @@ export function NaturallyIntelligent() {
 
       <div className="section-padding bg-lavender-200">
         <div className="container-width">
-          <SectionTitle
-            eyebrow="Naturally Intelligent Design"
-            title="A.I. that restores natural environmental cues"
-            subtitle="Soluna uses A.I. to restore natural environmental cues—light, sound, scent, taste and temperature—to enhance your sleep quality by optimizing your bedroom in order to fall asleep faster, stay asleep longer, and wake up more refreshed."
-          />
+          <ScrollReveal>
+            <SectionTitle
+              eyebrow="Naturally Intelligent Design"
+              title="A.I. that restores natural environmental cues"
+              subtitle="Soluna uses A.I. to restore natural environmental cues—light, sound, scent, taste and temperature—to enhance your sleep quality by optimizing your bedroom in order to fall asleep faster, stay asleep longer, and wake up more refreshed."
+            />
+          </ScrollReveal>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Device image */}
-            <div className="relative order-2 lg:order-1">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
+            <ScrollReveal direction="left" className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-80 h-80 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
+                </div>
+                <img
+                  src={`${import.meta.env.BASE_URL}woman-bedroom-2-close-up.webp`}
+                  alt="Soluna device glowing warmly on a nightstand"
+                  className="relative rounded-4xl shadow-2xl w-full"
+                />
               </div>
-              <img
-                src={`${import.meta.env.BASE_URL}woman-bedroom-2-close-up.webp`}
-                alt="Soluna device glowing warmly on a nightstand"
-                className="relative rounded-4xl shadow-2xl w-full"
-              />
-            </div>
+            </ScrollReveal>
 
             {/* Features list */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-4">
               {features.map((feature, index) => (
-                <div
-                  key={feature.title}
-                  className="flex gap-4 items-start bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-lavender-300/50 transition-all duration-300 hover:bg-white/80 hover:shadow-lg animate-fade-in-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className={`w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10`}>
-                    {feature.icon}
+                <ScrollReveal key={feature.title} delay={index * 100} direction="right">
+                  <div className="flex gap-4 items-start bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-lavender-300/50 transition-all duration-300 hover:bg-white/80 hover:shadow-lg hover:-translate-x-1">
+                    <div className={`w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10`}>
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg font-semibold text-navy-900 mb-1">{feature.title}</h3>
+                      <p className="text-navy-800/70 leading-relaxed text-sm">{feature.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-serif text-lg font-semibold text-navy-900 mb-1">{feature.title}</h3>
-                    <p className="text-navy-800/70 leading-relaxed text-sm">{feature.description}</p>
-                  </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

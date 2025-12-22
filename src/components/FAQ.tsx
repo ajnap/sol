@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { SectionTitle } from './SectionTitle';
+import { ScrollReveal } from './ScrollAnimations';
 
 const faqs = [
   {
@@ -30,11 +31,13 @@ export function FAQ() {
   return (
     <section id="faq" className="section-padding bg-gradient-to-b from-lavender-200 to-lavender-100">
       <div className="container-width">
-        <SectionTitle
-          eyebrow="Questions & Answers"
-          title="Everything You Need to Know"
-          subtitle="Can't find what you're looking for? Reach out to our sleep specialists anytime."
-        />
+        <ScrollReveal>
+          <SectionTitle
+            eyebrow="Questions & Answers"
+            title="Everything You Need to Know"
+            subtitle="Can't find what you're looking for? Reach out to our sleep specialists anytime."
+          />
+        </ScrollReveal>
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (

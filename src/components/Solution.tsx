@@ -1,4 +1,5 @@
 import { SectionTitle } from './SectionTitle';
+import { ScrollReveal } from './ScrollAnimations';
 
 const features = [
   {
@@ -77,47 +78,45 @@ export function Solution() {
 
       <div className="section-padding bg-lavender-200">
         <div className="container-width">
-          <SectionTitle
-            eyebrow="Our Solution"
-            title="Reconnect with natural sleep cues"
-            subtitle="Humans have lost connection to all the cues that tell them to fall asleep. We reconnect you with the things that used to tell your body to go to sleep."
-          />
+          <ScrollReveal>
+            <SectionTitle
+              eyebrow="Our Solution"
+              title="Reconnect with natural sleep cues"
+              subtitle="Humans have lost connection to all the cues that tell them to fall asleep. We reconnect you with the things that used to tell your body to go to sleep."
+            />
+          </ScrollReveal>
 
           {/* Main 4 features */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-lavender-300/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/90 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-br from-magenta-500/10 via-violet-500/10 to-cyan-500/10">
-                    {feature.icon}
+              <ScrollReveal key={feature.title} delay={index * 100}>
+                <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-lavender-300/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:bg-white/90 h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-br from-magenta-500/10 via-violet-500/10 to-cyan-500/10">
+                      {feature.icon}
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold text-navy-900 mb-3">{feature.title}</h3>
+                    <p className="text-navy-800/70 leading-relaxed">{feature.description}</p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-navy-900 mb-3">{feature.title}</h3>
-                  <p className="text-navy-800/70 leading-relaxed">{feature.description}</p>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
           {/* Additional features */}
           <div className="grid md:grid-cols-3 gap-6">
             {additionalFeatures.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="flex gap-4 items-start bg-white/50 rounded-2xl p-6 border border-lavender-300/30 animate-fade-in-up"
-                style={{ animationDelay: `${(index + 4) * 100}ms` }}
-              >
-                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-magenta-500/10 to-violet-500/10">
-                  {feature.icon}
+              <ScrollReveal key={feature.title} delay={(index + 4) * 100}>
+                <div className="flex gap-4 items-start bg-white/50 rounded-2xl p-6 border border-lavender-300/30 h-full transition-all duration-300 hover:bg-white/70 hover:shadow-lg">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-magenta-500/10 to-violet-500/10">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-sans font-semibold text-navy-900 mb-1">{feature.title}</h3>
+                    <p className="text-sm text-navy-800/70 leading-relaxed">{feature.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-sans font-semibold text-navy-900 mb-1">{feature.title}</h3>
-                  <p className="text-sm text-navy-800/70 leading-relaxed">{feature.description}</p>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

@@ -1,6 +1,9 @@
+import { ScrollReveal, AnimatedCounter } from './ScrollAnimations';
+
 const achievements = [
   {
-    value: "1000's",
+    value: 1000,
+    suffix: "'s",
     label: 'Consumer Research Calls',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -9,7 +12,8 @@ const achievements = [
     ),
   },
   {
-    value: '100K+',
+    value: 100,
+    suffix: 'K+',
     label: 'Customers Surveyed Annually',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -18,7 +22,8 @@ const achievements = [
     ),
   },
   {
-    value: '20+',
+    value: 20,
+    suffix: '+',
     label: 'Uniquely Designed Pending Patents',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,35 +43,39 @@ export function Mindset() {
       </div>
 
       <div className="container-width relative">
-        <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-white/80 mb-4">
-            Our Approach
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-4xl mx-auto">
-            Consumer-centric approach that fast-tracks product–market fit
-          </h2>
-          <p className="mt-5 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-            We have already done the research to build exactly what you need.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-white/80 mb-4">
+              Our Approach
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-4xl mx-auto">
+              Consumer-centric approach that fast-tracks product–market fit
+            </h2>
+            <p className="mt-5 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+              We have already done the research to build exactly what you need.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-3 gap-8">
           {achievements.map((item, index) => (
-            <div
-              key={item.label}
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center animate-fade-in-up"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-white/20 text-white">
-                {item.icon}
+            <ScrollReveal key={item.label} delay={index * 150}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center h-full">
+                <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-white/20 text-white">
+                  {item.icon}
+                </div>
+                <div className="font-serif text-4xl md:text-5xl font-bold text-white mb-2">
+                  <AnimatedCounter
+                    value={item.value}
+                    suffix={item.suffix}
+                    duration={2000}
+                  />
+                </div>
+                <div className="font-sans text-white/80">
+                  {item.label}
+                </div>
               </div>
-              <div className="font-serif text-4xl md:text-5xl font-bold text-white mb-2">
-                {item.value}
-              </div>
-              <div className="font-sans text-white/80">
-                {item.label}
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

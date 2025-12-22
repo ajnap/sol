@@ -1,3 +1,5 @@
+import { ScrollReveal } from './ScrollAnimations';
+
 const problems = [
   {
     icon: (
@@ -38,35 +40,35 @@ export function Opportunity() {
       </div>
 
       <div className="container-width relative">
-        <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-magenta-400 mb-4">
-            The Opportunity
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-3xl mx-auto">
-            Current sleep tech is approaching the problem all wrong.
-          </h2>
-          <p className="mt-5 text-lg md:text-xl text-lavender-300/80 leading-relaxed max-w-2xl mx-auto">
-            The current solutions are making things worse:
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-magenta-400 mb-4">
+              The Opportunity
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-3xl mx-auto">
+              Current sleep tech is approaching the problem all wrong.
+            </h2>
+            <p className="mt-5 text-lg md:text-xl text-lavender-300/80 leading-relaxed max-w-2xl mx-auto">
+              The current solutions are making things worse:
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
-            <div
-              key={problem.title}
-              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 animate-fade-in-up"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-2xl bg-white/10">
-                {problem.icon}
+            <ScrollReveal key={problem.title} delay={index * 150}>
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 h-full transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1">
+                <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-2xl bg-white/10">
+                  {problem.icon}
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-white mb-3">
+                  {problem.title}
+                </h3>
+                <p className="text-lavender-300/70 leading-relaxed">
+                  {problem.description}
+                </p>
               </div>
-              <h3 className="font-serif text-xl font-semibold text-white mb-3">
-                {problem.title}
-              </h3>
-              <p className="text-lavender-300/70 leading-relaxed">
-                {problem.description}
-              </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

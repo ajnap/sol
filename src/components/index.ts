@@ -11,3 +11,4 @@ export { Mindset } from './Mindset';
 export { NaturallyIntelligent } from './NaturallyIntelligent';
 export { FAQ } from './FAQ';
 export { Footer } from './Footer';
+export { ScrollProgress, ScrollReveal, AnimatedCounter, StaggeredContainer } from './ScrollAnimations';
