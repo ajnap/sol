@@ -1,5 +1,3 @@
-import { SectionTitle } from './SectionTitle';
-
 const problems = [
   {
     icon: (
