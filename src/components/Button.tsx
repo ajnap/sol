@@ -1,6 +1,6 @@
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'gradient';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   onClick?: () => void;
@@ -18,9 +18,10 @@ export function Button({
   const baseStyles = 'inline-flex items-center justify-center font-sans font-semibold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variants = {
-    primary: 'bg-sunrise-500 text-white hover:bg-sunrise-600 focus:ring-sunrise-500 shadow-lg hover:shadow-xl hover:-translate-y-0.5',
-    secondary: 'bg-plum-600 text-white hover:bg-plum-700 focus:ring-plum-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5',
-    outline: 'border-2 border-plum-600 text-plum-600 hover:bg-plum-600 hover:text-white focus:ring-plum-600',
+    primary: 'bg-gradient-to-b from-magenta-500 to-sunrise-400 text-white hover:from-magenta-400 hover:to-sunrise-300 focus:ring-magenta-500 shadow-lg shadow-magenta-500/25 hover:shadow-xl hover:shadow-magenta-500/30 hover:-translate-y-0.5',
+    secondary: 'bg-violet-500 text-white hover:bg-violet-400 focus:ring-violet-500 shadow-lg hover:shadow-xl hover:-translate-y-0.5',
+    outline: 'border-2 border-white/80 text-white hover:bg-white/10 focus:ring-white/50 backdrop-blur-sm',
+    gradient: 'bg-gradient-to-r from-magenta-500 via-violet-500 to-cyan-500 text-white hover:from-magenta-400 hover:via-violet-400 hover:to-cyan-400 focus:ring-violet-500 shadow-lg shadow-violet-500/25 hover:shadow-xl hover:-translate-y-0.5',
   };
 
   const sizes = {

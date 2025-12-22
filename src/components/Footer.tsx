@@ -72,10 +72,30 @@ export function Footer() {
             {/* Brand */}
             <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sunrise-400 to-plum-500 flex items-center justify-center">
-                  <div className="w-5 h-5 rounded-full bg-white/30" />
-                </div>
-                <span className="font-sans text-xl font-bold tracking-wide">SOLUNA</span>
+                <svg viewBox="0 0 100 100" className="w-10 h-10" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="sunGradFooter" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#FFB347"/>
+                      <stop offset="50%" stopColor="#FF8C42"/>
+                      <stop offset="100%" stopColor="#FF7AD9"/>
+                    </linearGradient>
+                    <linearGradient id="moonGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#FF7AD9"/>
+                      <stop offset="100%" stopColor="#7B5CFF"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="45" fill="url(#sunGradFooter)"/>
+                  <circle cx="50" cy="55" r="28" fill="url(#moonGradFooter)"/>
+                  <circle cx="50" cy="45" r="18" fill="#FFFFFF" opacity="0.9"/>
+                  <g fill="#FFB347">
+                    <rect x="48" y="5" width="4" height="12" rx="2"/>
+                    <rect x="48" y="5" width="4" height="12" rx="2" transform="rotate(30 50 50)"/>
+                    <rect x="48" y="5" width="4" height="12" rx="2" transform="rotate(60 50 50)"/>
+                    <rect x="48" y="5" width="4" height="12" rx="2" transform="rotate(-30 50 50)"/>
+                    <rect x="48" y="5" width="4" height="12" rx="2" transform="rotate(-60 50 50)"/>
+                  </g>
+                </svg>
+                <span className="font-sans text-xl font-bold tracking-widest">SOLUNA</span>
               </div>
               <p className="text-lavender-300/70 text-sm leading-relaxed">
                 The world's smartest sleep device. Transforming nights, one dreamer at a time.

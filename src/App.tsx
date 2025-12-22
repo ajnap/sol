@@ -2,11 +2,11 @@
 import {
   Header,
   Hero,
-  HowItWorks,
-  Science,
-  DeviceApp,
-  Stats,
-  Testimonials,
+  Problem,
+  Opportunity,
+  Solution,
+  Mindset,
+  NaturallyIntelligent,
   FAQ,
   Footer,
 } from './components';
@@ -17,13 +17,11 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <HowItWorks />
-        <section id="science">
-          <Science />
-        </section>
-        <DeviceApp />
-        <Stats />
-        <Testimonials />
+        <Problem />
+        <Opportunity />
+        <Solution />
+        <Mindset />
+        <NaturallyIntelligent />
         <FAQ />
       </main>
       <Footer />

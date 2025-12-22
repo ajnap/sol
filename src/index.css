@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-sans text-navy-900 bg-lavender-200 antialiased;
+    @apply font-sans text-navy-900 bg-lavender-100 antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {

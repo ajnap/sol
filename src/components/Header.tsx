@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Button } from './Button';
+import { Logo } from './Logo';
 
 const navLinks = [
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Science', href: '#science' },
+  { label: 'Problem', href: '#problem' },
+  { label: 'Solution', href: '#solution' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -31,13 +32,8 @@ export function Header() {
       <div className="container-width">
         <nav className="flex items-center justify-between h-20 px-6 lg:px-12">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sunrise-400 to-plum-500 flex items-center justify-center shadow-lg">
-              <div className="w-5 h-5 rounded-full bg-white/30" />
-            </div>
-            <span className="font-sans text-xl font-bold tracking-wide text-navy-900">
-              SOLUNA
-            </span>
+          <a href="#">
+            <Logo />
           </a>
 
           {/* Desktop Navigation */}
@@ -46,7 +42,11 @@ export function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-sans text-sm font-medium text-navy-800/80 hover:text-navy-900 transition-colors"
+                className={`font-sans text-sm font-medium transition-colors ${
+                  isScrolled
+                    ? 'text-navy-800/80 hover:text-navy-900'
+                    : 'text-white/90 hover:text-white'
+                }`}
               >
                 {link.label}
               </a>
@@ -63,11 +63,15 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-lavender-200/50 transition-colors"
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              isScrolled
+                ? 'hover:bg-lavender-200/50'
+                : 'hover:bg-white/10'
+            }`}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-navy-900"
+              className={`w-6 h-6 ${isScrolled ? 'text-navy-900' : 'text-white'}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

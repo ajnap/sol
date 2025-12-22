@@ -1,12 +1,13 @@
 export { Button } from './Button';
 export { Card, IconCard } from './Card';
 export { SectionTitle } from './SectionTitle';
+export { Logo, LogoIcon } from './Logo';
 export { Header } from './Header';
 export { Hero } from './Hero';
-export { HowItWorks } from './HowItWorks';
-export { Science } from './Science';
-export { DeviceApp } from './DeviceApp';
-export { Stats } from './Stats';
-export { Testimonials } from './Testimonials';
+export { Problem } from './Problem';
+export { Opportunity } from './Opportunity';
+export { Solution } from './Solution';
+export { Mindset } from './Mindset';
+export { NaturallyIntelligent } from './NaturallyIntelligent';
 export { FAQ } from './FAQ';
 export { Footer } from './Footer';

@@ -1,0 +1,77 @@
+import { SectionTitle } from './SectionTitle';
+
+const problems = [
+  {
+    icon: (
+      <svg className="w-8 h-8 text-magenta-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    ),
+    title: 'Sleep Data Makes Us Anxious',
+    description: 'Obsessing over sleep metrics creates stress that actually worsens sleep quality.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+      </svg>
+    ),
+    title: 'Melatonin Is Damaging Our Bodies',
+    description: 'Long-term melatonin use can disrupt your body\'s natural hormone production.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    title: 'Current Tech Misses The Mark',
+    description: 'Most sleep devices track problems but don\'t actually solve them for consumers.',
+  },
+];
+
+export function Opportunity() {
+  return (
+    <section className="section-padding bg-navy-900 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-magenta-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container-width relative">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-magenta-400 mb-4">
+            The Opportunity
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-3xl mx-auto">
+            Current sleep tech is approaching the problem all wrong.
+          </h2>
+          <p className="mt-5 text-lg md:text-xl text-lavender-300/80 leading-relaxed max-w-2xl mx-auto">
+            The current solutions are making things worse:
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {problems.map((problem, index) => (
+            <div
+              key={problem.title}
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 animate-fade-in-up"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-2xl bg-white/10">
+                {problem.icon}
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-white mb-3">
+                {problem.title}
+              </h3>
+              <p className="text-lavender-300/70 leading-relaxed">
+                {problem.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
