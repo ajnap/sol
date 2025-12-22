@@ -10,5 +10,6 @@ export { Solution } from './Solution';
 export { Mindset } from './Mindset';
 export { NaturallyIntelligent } from './NaturallyIntelligent';
 export { FAQ } from './FAQ';
+export { Traction } from './Traction';
 export { Footer } from './Footer';
 export { ScrollProgress, ScrollReveal, AnimatedCounter, StaggeredContainer } from './ScrollAnimations';

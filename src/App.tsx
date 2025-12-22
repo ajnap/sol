@@ -7,6 +7,7 @@ import {
   Solution,
   Mindset,
   NaturallyIntelligent,
+  Traction,
   FAQ,
   Footer,
   ScrollProgress,
@@ -24,6 +25,7 @@ function App() {
         <Solution />
         <Mindset />
         <NaturallyIntelligent />
+        <Traction />
         <FAQ />
       </main>
       <Footer />

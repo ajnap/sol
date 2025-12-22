@@ -57,26 +57,43 @@ export function Mindset() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {achievements.map((item, index) => (
-            <ScrollReveal key={item.label} delay={index * 150}>
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center h-full">
-                <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-white/20 text-white">
-                  {item.icon}
-                </div>
-                <div className="font-serif text-4xl md:text-5xl font-bold text-white mb-2">
-                  <AnimatedCounter
-                    value={item.value}
-                    suffix={item.suffix}
-                    duration={2000}
-                  />
-                </div>
-                <div className="font-sans text-white/80">
-                  {item.label}
-                </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          {/* Nature image */}
+          <ScrollReveal direction="left">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-80 h-80 rounded-full bg-white/10 blur-3xl" />
               </div>
-            </ScrollReveal>
-          ))}
+              <img
+                src={`${import.meta.env.BASE_URL}woman-forest-1.webp`}
+                alt="Woman in nature, reconnecting with natural rhythms"
+                className="relative rounded-4xl shadow-2xl w-full"
+              />
+            </div>
+          </ScrollReveal>
+
+          {/* Stats grid */}
+          <div className="grid sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-6">
+            {achievements.map((item, index) => (
+              <ScrollReveal key={item.label} delay={index * 150}>
+                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 text-center h-full">
+                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-white/20 text-white">
+                    {item.icon}
+                  </div>
+                  <div className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+                    <AnimatedCounter
+                      value={item.value}
+                      suffix={item.suffix}
+                      duration={2000}
+                    />
+                  </div>
+                  <div className="font-sans text-white/80 text-sm lg:text-base">
+                    {item.label}
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

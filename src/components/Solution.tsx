@@ -103,21 +103,37 @@ export function Solution() {
             ))}
           </div>
 
-          {/* Additional features */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {additionalFeatures.map((feature, index) => (
-              <ScrollReveal key={feature.title} delay={(index + 4) * 100}>
-                <div className="flex gap-4 items-start bg-white/50 rounded-2xl p-6 border border-lavender-300/30 h-full transition-all duration-300 hover:bg-white/70 hover:shadow-lg">
-                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-magenta-500/10 to-violet-500/10">
-                    {feature.icon}
+          {/* Additional features with phone mockup */}
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              {additionalFeatures.map((feature, index) => (
+                <ScrollReveal key={feature.title} delay={(index + 4) * 100}>
+                  <div className="flex gap-4 items-start bg-white/50 rounded-2xl p-6 border border-lavender-300/30 h-full transition-all duration-300 hover:bg-white/70 hover:shadow-lg">
+                    <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-magenta-500/10 to-violet-500/10">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-sans font-semibold text-navy-900 mb-1">{feature.title}</h3>
+                      <p className="text-sm text-navy-800/70 leading-relaxed">{feature.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-sans font-semibold text-navy-900 mb-1">{feature.title}</h3>
-                    <p className="text-sm text-navy-800/70 leading-relaxed">{feature.description}</p>
-                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* Phone mockup */}
+            <ScrollReveal direction="right">
+              <div className="relative flex justify-center">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
                 </div>
-              </ScrollReveal>
-            ))}
+                <img
+                  src={`${import.meta.env.BASE_URL}hand-mockup-phone.webp`}
+                  alt="Soluna mobile app in hand"
+                  className="relative w-full max-w-sm drop-shadow-2xl"
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>
