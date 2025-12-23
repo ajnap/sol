@@ -26,12 +26,14 @@ export function Footer() {
       <div className="section-padding border-b border-white/10">
         <div className="container-width">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
-              Ready to Transform Your Sleep?
+            <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-magenta-400 mb-4">
+              Get an Exclusive Discount
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-white">
+              We're Launching Soon
             </h2>
             <p className="text-lg text-lavender-300/80 mb-8">
-              Join the waitlist for early access and exclusive launch pricing.
-              Be among the first to experience the future of sleep.
+              Get an exclusive discount by signing up now! Be among the first to experience the future of sleep.
             </p>
 
             {subscribed ? (
@@ -40,7 +42,7 @@ export function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <p className="text-xl font-semibold text-white">You're on the list!</p>
-                <p className="text-lavender-300/80 mt-2">We'll be in touch with exclusive updates soon.</p>
+                <p className="text-lavender-300/80 mt-2">We'll be in touch with your exclusive discount soon.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
@@ -53,7 +55,7 @@ export function Footer() {
                   className="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-sunrise-500 focus:border-transparent"
                 />
                 <Button variant="primary" size="lg">
-                  Reserve Now
+                  Reserve Launch Invite
                 </Button>
               </form>
             )}

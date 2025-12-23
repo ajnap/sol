@@ -32,10 +32,19 @@ export function Hero() {
               Soluna reconnects you with the things that used to tell your body to rest.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-400">
-              <Button variant="primary" size="lg" href="#reserve">
-                Reserve Your Soluna
-              </Button>
+            <div className="flex flex-col gap-4 items-center lg:items-start animate-fade-in-up animation-delay-400">
+              <div className="relative">
+                {/* Sparkle badge */}
+                <div className="absolute -top-3 -right-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg flex items-center gap-1 animate-pulse">
+                  <svg className="w-3 h-3 text-magenta-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
+                  </svg>
+                  <span className="bg-gradient-to-r from-magenta-500 via-violet-500 to-cyan-500 bg-clip-text text-transparent">Early Bird</span>
+                </div>
+                <Button variant="primary" size="lg" href="#reserve">
+                  Reserve Launch Invite
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -61,8 +70,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <a href="#problem" className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group animate-bounce">
+      {/* Scroll indicator - hidden on mobile to avoid overlap */}
+      <a href="#problem" className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 group animate-bounce">
         <span className="text-xs font-medium text-white/60 uppercase tracking-wider group-hover:text-white/80 transition-colors">
           Learn more
         </span>

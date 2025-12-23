@@ -73,11 +73,20 @@ export function Traction() {
                 </div>
 
                 {/* Reserve Button */}
-                <a href="#reserve">
-                  <Button size="lg" className="px-10">
-                    Reserve Launch Invite
-                  </Button>
-                </a>
+                <div className="relative">
+                  {/* Sparkle badge */}
+                  <div className="absolute -top-3 -right-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg flex items-center gap-1 animate-pulse z-10">
+                    <svg className="w-3 h-3 text-magenta-500" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
+                    </svg>
+                    <span className="bg-gradient-to-r from-magenta-500 via-violet-500 to-cyan-500 bg-clip-text text-transparent">Early Bird</span>
+                  </div>
+                  <a href="#reserve">
+                    <Button size="lg" className="px-10">
+                      Reserve Launch Invite
+                    </Button>
+                  </a>
+                </div>
               </div>
             </ScrollReveal>
           </div>
