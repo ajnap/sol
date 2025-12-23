@@ -54,46 +54,24 @@ export function Opportunity() {
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Problems list */}
-          <div className="grid gap-6">
-            {problems.map((problem, index) => (
-              <ScrollReveal key={problem.title} delay={index * 150}>
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1">
-                  <div className="flex gap-5 items-start">
-                    <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-white/10">
-                      {problem.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-xl font-semibold text-white mb-2">
-                        {problem.title}
-                      </h3>
-                      <p className="text-lavender-300/70 leading-relaxed">
-                        {problem.description}
-                      </p>
-                    </div>
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {problems.map((problem, index) => (
+            <ScrollReveal key={problem.title} delay={index * 150}>
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 h-full">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-white/10 mb-4">
+                    {problem.icon}
                   </div>
+                  <h3 className="font-serif text-xl font-semibold text-white mb-2">
+                    {problem.title}
+                  </h3>
+                  <p className="text-lavender-300/70 leading-relaxed">
+                    {problem.description}
+                  </p>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Wake up image */}
-          <ScrollReveal direction="right">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
               </div>
-              <img
-                src={`${import.meta.env.BASE_URL}man-wake-up-1.webp`}
-                alt="Man waking up refreshed"
-                className="relative rounded-4xl shadow-2xl w-full"
-              />
-              <div className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                <span className="text-sm text-white font-medium">Imagine waking up refreshed</span>
-              </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
