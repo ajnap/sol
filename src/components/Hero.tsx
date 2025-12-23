@@ -1,8 +1,17 @@
+import { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { useParallax } from '../hooks/useScrollAnimation';
 
 export function Hero() {
   const parallaxOffset = useParallax(0.3);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => setIsDesktop(window.innerWidth >= 1024);
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+    return () => window.removeEventListener('resize', checkWidth);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
@@ -48,11 +57,11 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Device image with parallax */}
+          {/* Device image with parallax (desktop only) */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div
               className="relative"
-              style={{ transform: `translateY(${parallaxOffset}px)` }}
+              style={{ transform: isDesktop ? `translateY(${parallaxOffset}px)` : 'none' }}
             >
               {/* Glow effect */}
               <div className="absolute inset-0 flex items-center justify-center">
