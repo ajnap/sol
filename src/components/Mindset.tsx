@@ -49,7 +49,7 @@ export function Mindset() {
               Our Research
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-4xl mx-auto">
-              We have crafted this solution with our customer
+              We crafted this solution with our customer
             </h2>
           </div>
         </ScrollReveal>

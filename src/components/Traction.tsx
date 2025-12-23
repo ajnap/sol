@@ -73,9 +73,11 @@ export function Traction() {
                 </div>
 
                 {/* Reserve Button */}
-                <Button size="lg" className="px-10">
-                  Reserve Launch Invite
-                </Button>
+                <a href="#reserve">
+                  <Button size="lg" className="px-10">
+                    Reserve Launch Invite
+                  </Button>
+                </a>
               </div>
             </ScrollReveal>
           </div>

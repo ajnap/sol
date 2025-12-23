@@ -5,8 +5,9 @@ import {
   Problem,
   Opportunity,
   Solution,
-  Mindset,
+  AppControl,
   Traction,
+  Mindset,
   FAQ,
   Footer,
   ScrollProgress,
@@ -22,8 +23,9 @@ function App() {
         <Problem />
         <Opportunity />
         <Solution />
-        <Mindset />
+        <AppControl />
         <Traction />
+        <Mindset />
         <FAQ />
       </main>
       <Footer />
