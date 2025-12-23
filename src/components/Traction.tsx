@@ -1,4 +1,5 @@
 import { ScrollReveal, AnimatedCounter } from './ScrollAnimations';
+import { Button } from './Button';
 
 const stats = [
   {
@@ -55,30 +56,26 @@ export function Traction() {
               </div>
             </div>
 
-            {/* Device & App Image */}
+            {/* Device & CTA */}
             <ScrollReveal direction="right">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-80 h-80 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
+              <div className="flex flex-col items-center">
+                <div className="relative mb-8">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-64 h-64 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
+                  </div>
+
+                  {/* Device - smaller */}
+                  <img
+                    src={`${import.meta.env.BASE_URL}Front-Clock-with-background-removebg-preview.png`}
+                    alt="Soluna smart sleep device"
+                    className="relative w-full max-w-xs mx-auto drop-shadow-2xl"
+                  />
                 </div>
 
-                {/* Device */}
-                <img
-                  src={`${import.meta.env.BASE_URL}Front-Clock-with-background-removebg-preview.png`}
-                  alt="Soluna smart sleep device"
-                  className="relative w-full max-w-md mx-auto drop-shadow-2xl"
-                />
-
-                {/* Floating labels */}
-                <div className="absolute top-4 right-0 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                  <span className="text-xs text-white font-medium">AI-powered device</span>
-                </div>
-                <div className="absolute bottom-1/4 left-0 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                  <span className="text-xs text-white font-medium">Light, sound, temp, scent</span>
-                </div>
-                <div className="absolute top-1/3 right-0 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                  <span className="text-xs text-white font-medium">Environment control</span>
-                </div>
+                {/* Reserve Button */}
+                <Button size="lg" className="px-10">
+                  Reserve Launch Invite
+                </Button>
               </div>
             </ScrollReveal>
           </div>

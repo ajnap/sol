@@ -4,69 +4,53 @@ import { ScrollReveal } from './ScrollAnimations';
 const features = [
   {
     icon: (
-      <svg className="w-8 h-8 text-magenta-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-      </svg>
-    ),
-    title: 'Scent',
-    description: '2 scent pods with a morning scent and a night-time scent to signal your body\'s natural rhythms.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8 text-sunrise-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
     ),
     title: 'Light',
-    description: 'Light that simulates sunrise and sunset, training your circadian rhythm naturally.',
+    description: 'Uses specific wavelengths to stimulate the natural effects of sunsets at night and sunrises in the morning.',
+    bgColor: 'bg-gradient-to-br from-sunrise-400 to-sunrise-500',
   },
   {
     icon: (
-      <svg className="w-8 h-8 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
       </svg>
     ),
     title: 'Sound',
-    description: 'Sound design scientifically proven to increase natural melatonin production.',
+    description: 'Uses a library of science-backed sounds that help reduce stress at night and naturally increase alertness in the morning.',
+    bgColor: 'bg-gradient-to-br from-violet-400 to-violet-600',
   },
   {
     icon: (
-      <svg className="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+    title: 'Taste',
+    description: 'Sleep powder uses taste as a gentle signal to relax, with calming herbs that support your natural sleep rhythm.',
+    bgColor: 'bg-gradient-to-br from-magenta-400 to-magenta-600',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+      </svg>
+    ),
+    title: 'Scent',
+    description: 'Scent pods release unique and pleasant scents that activate natural sleep and waking areas of the brain.',
+    bgColor: 'bg-gradient-to-br from-cyan-400 to-cyan-600',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
       </svg>
     ),
     title: 'Temperature',
-    description: 'Connect Soluna with your smart thermostat and it will automatically change the temperature.',
-  },
-];
-
-const additionalFeatures = [
-  {
-    icon: (
-      <svg className="w-6 h-6 text-magenta-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: 'Environment Control',
-    description: 'Using proprietary AI software and on-board computer, Soluna will optimize your room for sleep.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-      </svg>
-    ),
-    title: 'Constantly Learning',
-    description: 'Leverages data from onboard sensors and wearables to hack your sleep.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: 'Custom Phone App',
-    description: 'We make the experience light and fun so you don\'t have to do anything but sleep.',
+    description: 'Connects to your smart thermostat to recreate natural, ideal sleeping and waking conditions.',
+    bgColor: 'bg-gradient-to-br from-violet-500 to-cyan-500',
   },
 ];
 
@@ -86,54 +70,37 @@ export function Solution() {
             />
           </ScrollReveal>
 
-          {/* Main 4 features */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
-            {features.map((feature, index) => (
-              <ScrollReveal key={feature.title} delay={index * 100}>
-                <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-lavender-300/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:bg-white/90 h-full">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-16 h-16 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-br from-magenta-500/10 via-violet-500/10 to-cyan-500/10">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-serif text-xl font-semibold text-navy-900 mb-3">{feature.title}</h3>
-                    <p className="text-navy-800/70 leading-relaxed">{feature.description}</p>
-                  </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Device image */}
+            <ScrollReveal direction="left" className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-80 h-80 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+                <img
+                  src={`${import.meta.env.BASE_URL}woman-bedroom-2-close-up.webp`}
+                  alt="Soluna device glowing warmly on a nightstand"
+                  className="relative rounded-4xl shadow-2xl w-full"
+                />
+              </div>
+            </ScrollReveal>
 
-          {/* Additional features with phone mockup */}
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4">
-              {additionalFeatures.map((feature, index) => (
-                <ScrollReveal key={feature.title} delay={(index + 4) * 100}>
-                  <div className="flex gap-4 items-start bg-white/50 rounded-2xl p-6 border border-lavender-300/30 h-full transition-all duration-300 hover:bg-white/70 hover:shadow-lg">
-                    <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-magenta-500/10 to-violet-500/10">
+            {/* Features list */}
+            <div className="order-1 lg:order-2 space-y-4">
+              {features.map((feature, index) => (
+                <ScrollReveal key={feature.title} delay={index * 100} direction="right">
+                  <div className="flex gap-4 items-start bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-lavender-300/50 transition-all duration-300 hover:bg-white/80 hover:shadow-lg hover:-translate-x-1">
+                    <div className={`w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-xl ${feature.bgColor} shadow-lg`}>
                       {feature.icon}
                     </div>
                     <div>
-                      <h3 className="font-sans font-semibold text-navy-900 mb-1">{feature.title}</h3>
-                      <p className="text-sm text-navy-800/70 leading-relaxed">{feature.description}</p>
+                      <h3 className="font-serif text-lg font-semibold text-navy-900 mb-1">{feature.title}</h3>
+                      <p className="text-navy-800/70 leading-relaxed text-sm">{feature.description}</p>
                     </div>
                   </div>
                 </ScrollReveal>
               ))}
             </div>
-
-            {/* Phone mockup */}
-            <ScrollReveal direction="right">
-              <div className="relative flex justify-center">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-magenta-500/20 via-violet-500/20 to-cyan-500/20 blur-3xl" />
-                </div>
-                <img
-                  src={`${import.meta.env.BASE_URL}hand-mockup-phone.webp`}
-                  alt="Soluna mobile app in hand"
-                  className="relative w-full max-w-sm drop-shadow-2xl"
-                />
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </div>

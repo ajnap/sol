@@ -8,7 +8,6 @@ export { Problem } from './Problem';
 export { Opportunity } from './Opportunity';
 export { Solution } from './Solution';
 export { Mindset } from './Mindset';
-export { NaturallyIntelligent } from './NaturallyIntelligent';
 export { FAQ } from './FAQ';
 export { Traction } from './Traction';
 export { Footer } from './Footer';

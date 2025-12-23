@@ -6,7 +6,6 @@ import {
   Opportunity,
   Solution,
   Mindset,
-  NaturallyIntelligent,
   Traction,
   FAQ,
   Footer,
@@ -24,7 +23,6 @@ function App() {
         <Opportunity />
         <Solution />
         <Mindset />
-        <NaturallyIntelligent />
         <Traction />
         <FAQ />
       </main>

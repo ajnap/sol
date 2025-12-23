@@ -43,7 +43,7 @@ export function Opportunity() {
         <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
             <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-magenta-400 mb-4">
-              The Opportunity
+              The Problem
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-3xl mx-auto">
               Current sleep tech is approaching the problem all wrong.

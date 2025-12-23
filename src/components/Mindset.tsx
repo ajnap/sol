@@ -46,54 +46,34 @@ export function Mindset() {
         <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
             <span className="inline-block font-sans text-sm font-semibold tracking-wider uppercase text-white/80 mb-4">
-              Our Approach
+              Our Research
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-4xl mx-auto">
-              Consumer-centric approach that fast-tracks product–market fit
+              We have crafted this solution with our customer
             </h2>
-            <p className="mt-5 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-              We have already done the research to build exactly what you need.
-            </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-          {/* Nature image */}
-          <ScrollReveal direction="left">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-80 h-80 rounded-full bg-white/10 blur-3xl" />
-              </div>
-              <img
-                src={`${import.meta.env.BASE_URL}woman-forest-1.webp`}
-                alt="Woman in nature, reconnecting with natural rhythms"
-                className="relative rounded-4xl shadow-2xl w-full"
-              />
-            </div>
-          </ScrollReveal>
-
-          {/* Stats grid */}
-          <div className="grid sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-6">
-            {achievements.map((item, index) => (
-              <ScrollReveal key={item.label} delay={index * 150}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 text-center h-full">
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-white/20 text-white">
-                    {item.icon}
-                  </div>
-                  <div className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
-                    <AnimatedCounter
-                      value={item.value}
-                      suffix={item.suffix}
-                      duration={2000}
-                    />
-                  </div>
-                  <div className="font-sans text-white/80 text-sm lg:text-base">
-                    {item.label}
-                  </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {achievements.map((item, index) => (
+            <ScrollReveal key={item.label} delay={index * 150}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center h-full">
+                <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-white/20 text-white">
+                  {item.icon}
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+                <div className="font-serif text-4xl md:text-5xl font-bold text-white mb-2">
+                  <AnimatedCounter
+                    value={item.value}
+                    suffix={item.suffix}
+                    duration={2000}
+                  />
+                </div>
+                <div className="font-sans text-white/80">
+                  {item.label}
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
